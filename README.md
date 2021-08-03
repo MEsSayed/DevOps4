@@ -40,3 +40,31 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+Running scripts
+To run app.py in standalone:
+
+$python app.py
+To run app.py in Docker:
+$./run_docker.sh
+To run app.py in Kubernetes:
+$./run_kubernetes.sh
+To make a prediction, open a separate tab or terminal window and run
+$./make_prediction.sh
+To upload an image to docker, run below script
+$./upload_docker.sh
+
+### Files and folders included
+.circleci - CircleCI config scripts
+model_data - ML model related data (model, csv data)
+output_txt_files - Output log files (docker, kubernetes)
+docker_out.txt - run_docker.sh output
+kubernetes_out.txt - run_kubernetes.sh output
+app.py - Python web application
+Dockerfile - Docker image config
+make_prediction.sh - Make prediction HTTP call script
+Makefile - make file (install, test, lint steps)
+requirements.txt - Web application dependencies to be installed (python, libraries)
+run_docker.sh - Run docker container script
+run_kubernetes.sh - Script to run kubernetes pod for the web app
+upload_docker.sh - Script to upload docker image to docker hub script
